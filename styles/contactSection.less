@@ -1,0 +1,110 @@
+// out: false
+
+.contactSection {
+  background-color: @border;
+
+  .paragraph {
+    text-align: center;
+    margin-top: 50px;
+    @media (max-width: 1100px) {
+      margin-top: 20px;
+    }
+
+    h2 {
+      margin-bottom: 90px;
+      @media (max-width: 1100px) {
+        margin-bottom: 50px;
+      }
+
+      &:after {
+        left: calc(50% - 21px);
+      }
+    }
+  }
+
+  .contactBlk {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1100px) {
+      display: block;
+    }
+
+    .contact {
+      text-align: center;
+      @media (max-width: 1100px) {
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 20px;
+        @media (max-width: 1100px) {
+          padding-left: 0px;
+        }
+      }
+
+      img {
+        margin-bottom: 30px;
+        @media (max-width: 1100px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .contactFormBlk {
+    background-color: @black;
+    max-width: 770px;
+    padding: 60px 60px 80px;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    @media (max-width: 1100px) {
+      padding: 20px 10px 20px;
+    }
+
+    button {
+      float: right;
+      margin-right: 0;
+    }
+
+    .contactForm {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 1100px) {
+        display: block;
+        text-align: center;
+      }
+
+      input, textarea {
+        text-transform: uppercase;
+        color: @grey;
+        background-color: @black;
+        border: 1px solid @grey;
+        padding: 15px;
+        width: 300px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 2px;
+        @media (max-width: 1100px) {
+          width: 300px;
+        }
+      }
+
+      .formBlk {
+        input {
+          margin-bottom: 20px;
+        }
+      }
+
+      textarea {
+        height: 197px;
+        resize: none;
+        @media (max-width: 1100px) {
+          height: 130px;
+        }
+      }
+
+    }
+  }
+}

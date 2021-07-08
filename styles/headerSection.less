@@ -1,0 +1,124 @@
+// out: false
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+.headerSection {
+  background-image: url(../images/header.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media (max-width: 1100px) {
+    background-size: 200%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    @media (max-width: 1100px) {
+      p {
+        font-size: 12px;
+      }
+
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-transform: uppercase;
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+
+    p {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-right: 5px;
+      color: @white;
+    }
+
+    .logoMin p {
+      font-size: 9px;
+      color: @grey;
+    }
+  }
+
+
+  a {
+    font-weight: 600;
+    margin-right: 10px;
+    color: @white;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:hover {
+      border-bottom: 2px solid @blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.headerText {
+  max-width: 475px;
+  @media (max-width: 1100px) {
+    max-width: 370px;
+  }
+
+  h1 {
+    font-size: 48px;
+    color: @white;
+    margin: 25px 0;
+    @media (max-width: 1100px) {
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 60px;
+  }
+}
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.downloadBlk {
+  margin-bottom: 100px;
+  @media (max-width: 1100px) {
+    margin: 20px 0;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.headerPhoto {
+  position: absolute;
+  right: -60px;
+  top: 85px;
+  @media (max-width: 1100px) {
+    //right: -370px;
+    //top: 40px;
+    display: none;
+  }
+
+  img {
+    image-rendering: auto;
+    width: 90%;
+    @media (max-width: 1100px) {
+      width: 45%;
+    }
+  }
+}

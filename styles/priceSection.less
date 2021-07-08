@@ -1,0 +1,135 @@
+// out: false
+
+.priceSection {
+  .paragraph {
+    text-align: center;
+    margin-top: 50px;
+    @media (max-width: 1100px) {
+      margin-top: 30px;
+    }
+
+    h2 {
+      margin-bottom: 90px;
+      @media (max-width: 1100px) {
+        margin-bottom: 50px;
+      }
+
+      &:after {
+        left: calc(50% - 21px);
+      }
+    }
+  }
+
+  .pricesBlk {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @media (max-width: 1100px) {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      width: 23%;
+      text-align: center;
+      border: 1px solid @border;
+      @media (max-width: 1100px) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .rate {
+        border-bottom: 1px solid @border;
+
+        p {
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          color: @black;
+          text-transform: uppercase;
+          padding: 15px 0 10px;
+          @media (max-width: 1100px) {
+            padding: 10px 0 10px;
+          }
+        }
+      }
+
+      .receipt {
+        border-bottom: 1px solid @border;
+        padding: 30px 0;
+        @media (max-width: 1100px) {
+          padding: 0;
+        }
+
+        .receiptContent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            color: @black;
+
+            &:last-child {
+              font-size: 48px;
+              margin-bottom: 0;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .description {
+        p {
+          padding: 40px 40px;
+          margin: 0;
+          @media (max-width: 1100px) {
+            padding: 20px 10px;
+          }
+
+          span {
+            color: @blue;
+          }
+        }
+
+        button {
+          color: @blue;
+          margin-right: 0;
+          margin-bottom: 30px;
+          @media (max-width: 1100px) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .active {
+      .rate {
+        p {
+          color: @blue;
+        }
+      }
+
+
+      .receipt {
+        background-color: @blue;
+
+        .receiptContent {
+          p {
+            color: @white;
+          }
+        }
+
+        p {
+          color: @white;
+        }
+      }
+
+      .description {
+        .viewBtn {
+          background-color: @blue;
+          color: @white;
+        }
+      }
+    }
+  }
+}

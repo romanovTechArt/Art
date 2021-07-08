@@ -1,0 +1,99 @@
+@import "headerSection.less";
+@import "productSection.less";
+@import "detailsSection.less";
+@import "customizeSection.less";
+@import "reviewsSection.less";
+@import "downloadSection.less";
+@import "priceSection.less";
+@import "contactSection.less";
+@import "footer.less";
+@import "./colors.less";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  p, a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: @grey;
+    @media (max-width: 1100px) {
+      font-size: 12px;
+    }
+  }
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: @black;
+    margin-top: 20px;
+    @media (max-width: 1100px) {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 2px;
+      background-color: @blue;
+      position: relative;
+      bottom: -35px;
+      @media (max-width: 1100px) {
+        bottom: -20px;
+      }
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    color: @blue;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  button {
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 16px 20px 14px;
+    font-weight: 700;
+    color: @white;
+    margin-right: 20px;
+    transition: 0.5s;
+    @media (max-width: 1100px) {
+      padding: 10px 10px;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  .downloadBtn {
+    background-color: @blue;
+    border: none;
+
+    &:hover {
+      background-color: #17a3ea;
+    }
+  }
+
+  .viewBtn {
+    background-color: Transparent;
+    border: 1px solid @grey;
+
+    &:hover {
+      border: 1px solid @border;
+    }
+  }
+
+}

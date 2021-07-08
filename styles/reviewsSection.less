@@ -1,0 +1,79 @@
+// out: false
+.reviewsSection {
+  background-image: url(../images/rewiew.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media (max-width: 1100px) {
+    background-size: 200%;
+  }
+
+  .slider {
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: left;
+  }
+
+  li {
+    border: 1px solid @grey;
+  }
+
+  .paragraph {
+    text-align: center;
+    margin-top: 60px;
+    @media (max-width: 1100px) {
+      margin-top: 30px;
+    }
+
+    h2 {
+      color: @white;
+
+      &:after {
+        left: calc(50% - 21px);
+      }
+    }
+  }
+
+  .item {
+    img {
+      opacity: 0;
+    }
+
+    .reviewBlk {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 150px;
+      @media (max-width: 1100px) {
+        margin-bottom: 0px;
+      }
+
+      .review {
+        width: 48%;
+
+        p {
+          color: @white;
+        }
+      }
+
+      .reviewText {
+        font-size: 24px;
+        font-family: italic;
+        margin-bottom: 30px;
+      }
+
+      .reviewName {
+        display: flex;
+
+        img {
+          opacity: 100%;
+          margin-right: 25px;
+        }
+
+        .userProfession {
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
